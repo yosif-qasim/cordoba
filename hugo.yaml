@@ -1,0 +1,70 @@
+baseURL: https://cordoba.com/
+languageCode: ar-eg
+title: مكتبة قرطبة
+defaultContentLanguage: ar
+hasCJKLanguage: false
+
+# Enable RTL support
+languages:
+  ar:
+    languageName: العربية
+    languageDirection: rtl
+    weight: 1
+    title: مكتبة قرطبة
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: monokai
+
+menu:
+  main:
+    - name: الرئيسية
+      pageRef: /
+      weight: 1
+    - name: المقالات
+      pageRef: /blog
+      weight: 2
+    - name: التوثيق
+      pageRef: /docs
+      weight: 3
+    - name: عن المكتبة
+      pageRef: /about
+      weight: 4
+    - name: بحث
+      weight: 5
+      params:
+        type: search
+    - name: GitHub
+      weight: 6
+      url: "https://github.com/yosif-qassim"
+      params:
+        icon: github
+
+params:
+  description: مكتبة أمن المعلومات بالعربية - موارد وشروحات متخصصة في الأمن السيبراني
+
+  theme:
+    default: light
+    displayToggle: true
+
+  navbar:
+    displayTitle: true
+    displayLogo: true
+    width: wide
+
+  page:
+    width: wide
+
+  footer:
+    displayCopyright: true
+    displayPoweredBy: true
+
+  editURL:
+    enable: false

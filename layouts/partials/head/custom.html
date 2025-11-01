@@ -1,0 +1,30 @@
+{{ $customCSS := resources.Get "css/custom.css" }}
+{{ if $customCSS }}
+  {{ $customCSS = $customCSS | resources.Minify }}
+  <link rel="stylesheet" href="{{ $customCSS.RelPermalink }}">
+{{ end }}
+
+<!-- RTL Support -->
+{{ if eq .Site.Language.LanguageDirection "rtl" }}
+  <html dir="rtl" lang="{{ .Site.Language.Lang }}">
+{{ end }}
+
+<!-- Arabic Font Support -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+  body, [lang="ar"] {
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+</style>
+
+<!-- Meta tags for SEO -->
+<meta name="description" content="{{ .Site.Params.description }}">
+<meta name="keywords" content="أمن المعلومات, الأمن السيبراني, الأمن الرقمي, security, cybersecurity, arabic">
+<meta name="author" content="Cordoba Library">
+
+<!-- Open Graph / Social Media -->
+<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+<meta property="og:description" content="{{ .Site.Params.description }}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_EG">
