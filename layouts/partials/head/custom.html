@@ -9,14 +9,10 @@
   <html dir="rtl" lang="{{ .Site.Language.Lang }}">
 {{ end }}
 
-<!-- Arabic Font Support -->
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
-
-  body, [lang="ar"] {
-    font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-</style>
+<!-- Arabic Font Support - Rubik -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Meta tags for SEO -->
 <meta name="description" content="{{ .Site.Params.description }}">
