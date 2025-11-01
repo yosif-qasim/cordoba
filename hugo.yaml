@@ -25,7 +25,7 @@ markup:
 
 menu:
   main:
-    - name: الرئيسية
+    - name: مكتبة قرطبة للأمن السيبراني
       pageRef: /
       weight: 1
     - name: المقالات
